@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title></title>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- <script src="http://www.michelin.com.br/docroot/michelin/br/scripts/jquery-1.6.1.min.js" type="text/javascript"></script>-->
+</head>
+<body>
+
+    <p id="demo"></p>
+
+
+    <script>
+        var latlng;
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            }
+        }
+
+        function showPosition(position) {
+            latlng = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+            //latlng = new google.maps.LatLng(-22.9174109,-43.1783651);
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({
+                'latLng': latlng
+            }, function(results, status) {
+                //console.log(results,status);
+                if (status == google.maps.GeocoderStatus.OK) {
+                    //break down the three dimensional array into simpler arrays
+                    for (i = 0; i < results.length; ++i) {
+                        var super_var1 = results[i].address_components;
+                        for (j = 0; j < 1; ++j) {
+                            var super_var2 = super_var1[j].types;
+                            for (k = 0; k < super_var2.length; ++k) {
+                                //find city
+                                if (super_var2[k] == "locality") {
+                                    var cidade = super_var1[j].long_name;
+                                    console.log(cidade);
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        getLocation();
+    </script>
+
+    <!-- <div id="map_canvas" style="width: 320px; height: 480px;"></div> -->
+
+</body>
+</html>

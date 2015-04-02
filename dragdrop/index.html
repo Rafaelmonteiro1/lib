@@ -1,0 +1,64 @@
+<html>
+<head>
+	<title></title>
+	<style>
+	#draggable, #draggable2,#draggable3, #draggable4,#draggable5, #draggable6 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; cursor:pointer;}
+	#droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+	.demo {
+	    float: left;
+	    width: 380px;
+	}
+	</style>
+	<link rel="stylesheet" href="">
+	<script src="jquery-1.7.2.min.js"></script>
+	<script src="jquery-ui-1.8.21.custom.min.js"></script>
+	<script>
+	$(function() {
+		$( "#draggable, #draggable2 , #draggable3, #draggable4, #draggable5, #draggable6" ).draggable({ revert: "valid" });
+
+		$( "#droppable" ).droppable({
+			activeClass: "ui-state-hover",
+			hoverClass: "ui-state-active",
+			drop: function( event, ui ) {
+				console.log(ui.draggable.context.attributes.id.nodeValue);
+			}
+		});
+	});
+	</script>
+
+</head>
+<body>
+
+	<meta charset="utf-8">
+
+	
+
+	<div class="demo">
+
+		<div id="draggable" class="ui-widget-content">
+			<p>I revert when I'm dropped</p>
+		</div>
+		<div id="draggable2" class="ui-widget-content">
+			<p>I revert when I'm dropped</p>
+		</div>
+		<div id="draggable3" class="ui-widget-content">
+			<p>I revert when I'm dropped</p>
+		</div>
+		<div id="draggable4" class="ui-widget-content">
+			<p>I revert when I'm dropped</p>
+		</div>
+		<div id="draggable5" class="ui-widget-content">
+			<p>I revert when I'm dropped</p>
+		</div>
+		<div id="draggable6" class="ui-widget-content">
+			<p>I revert when I'm dropped</p>
+		</div>
+
+	</div>
+	<div id="droppable" class="ui-widget-header">
+			<p>Drop me here</p>
+	</div>
+	<!-- End demo -->
+
+</body>
+</html>

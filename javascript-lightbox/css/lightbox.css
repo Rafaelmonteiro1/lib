@@ -1,0 +1,17 @@
+#mask {
+	position:fixed;
+	left:0;
+	top:0;
+	z-index:9000;
+	display:none;
+	background: #333;
+	opacity:0.9;
+}
+#boxes #lightbox {
+	position: fixed;
+	z-index:9999;
+	width:450px;
+	height:300px;
+}
+
+#content-lightbox{background:#FFF;}

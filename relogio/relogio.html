@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title></title>
+
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function() {
+		setInterval( function() {
+
+			var date = new Date();
+
+			var seconds = new Date().getSeconds();
+			var mins = new Date().getMinutes();
+			var hours = new Date().getHours();
+
+			$('#test').html(date);
+
+			$('#hours').html(hours);
+			$('#mins').html(mins);
+			$('#seconds').html(seconds);
+
+
+
+		}, 1000 );
+	});
+
+	</script>
+
+
+	<style type="text/css">
+		.relogio{color:#FFF; font-size: 30px; width:130px; height:30px; padding:2px 2px; background: #000; border-radius: 5px; line-height: 30px;}
+		.dots,
+		.hours,
+		.mins,
+		.seconds{padding:0px 3px; float: left; width:30px; text-align: right}
+		.dots{width:5px;}
+
+	</style>
+
+</head>
+<body>
+
+	<div class="relogio">
+		<span id="hours" class="hours"></span><span class="dots">:</span><span id="mins" class="mins"></span><span class="dots">:</span><span id="seconds" class="seconds"></span>
+	</div>
+
+</body>
+</html>

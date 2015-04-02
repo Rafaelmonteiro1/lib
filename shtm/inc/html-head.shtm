@@ -1,0 +1,46 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" dir="ltr" lang="pt-br"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" dir="ltr" lang="pt-br"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" dir="ltr" lang="pt-br"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" dir="ltr" lang="pt-br"> <!--<![endif]-->
+<head>
+
+    <!-- meta : charset -->
+    <meta charset="utf-8">
+
+    <!-- always force latest ie rendering engine & chrome frame -->
+    <meta http-equiv="X-UA-Compatible"      content="IE=edge,chrome=1">
+
+    <!-- meta : basics -->
+    <meta name="author"                     content="[AUTHOR]">
+    <meta name="Copyright"                  content="[COPYRIGHT]">
+    <meta name="robots"                     content="NOODP">
+
+    <meta http-equiv="Cache-Control"        content="no-cache, no-store">
+    <meta http-equiv="Pragma"               content="no-cache, no-store">
+    <meta http-equiv="expires"              content="Mon, 06 Jan 1990 00:00:01 GMT">
+
+    <!-- Turn off Skype Toolbar -->
+    <meta name="skype_toolbar"              content="skype_toolbar_parser_compatible" />
+
+    <!-- meta : viewport -->
+    <meta name="viewport"                   content="width=device-width,initial-scale=1">
+
+    <!-- meta : google verification -->
+    <meta name="google-site-verification"   content="">
+
+    <!-- favicon -->
+    <link rel="shortcut icon"               href="favicon.ico" type="image/ico">
+    <link rel="apple-touch-icon"            href="apple-touch-icon.png">
+
+    <!-- js -->
+    <script type="text/javascript"          src=""></script>
+
+    <!-- css -->
+    <link rel="stylesheet"                  href="" media="screen, projection, print" type="text/css">
+
+    <link rel="stylesheet"                  href="" media="screen, projection, print" type="text/css">
+
+    <!--[if IE ]>
+    <link rel="stylesheet"                  href="" media="screen, projection, print" type="text/css">
+    <![endif]-->
