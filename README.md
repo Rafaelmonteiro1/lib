@@ -1,4 +1,2 @@
-Lib
+Lib e infos
 ===
-
-Libs dev
