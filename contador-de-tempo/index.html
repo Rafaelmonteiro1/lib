@@ -57,16 +57,21 @@ function countdown() {
             document.countdownnsmain.document.countdownnssub.document.write(dday)
             document.countdownnsmain.document.countdownnssub.document.close()
         }
-        else if (document.all || document.getElementById)
-            crosscount.innerHTML = dday +' dia(s) '+ dhour +' hora(s) '+ dmin+' minuto(s) '
-    }
+        else if (document.all || document.getElementById){
+            dayplural = dday <= 1 ? '':'s';
+            hourplural = dhour <= 1 ? '':'s';
+            minplural = dmin <= 1 ? '':'s';
+            secplural = dsec <= 1 ? '':'s';
 
+            crosscount.innerHTML = dday +' dia'+ dayplural +' / '+ dhour +' hora'+ hourplural +' / '+ dmin+' minuto'+minplural+' / ' + dsec +' Segundo'+secplural;
+        }
+    }
     setTimeout("countdown()", 1000)
 }
 
 $(document).ready(function() {
     //Seta contador (ano, mês, dia, hora, minuto, segundo)
-    setcountdown(2016, 04, 02, 08, 03, 0);
+    setcountdown(2015, 04, 04, 11, 33, 0);
     start_countdown();
 
 });
