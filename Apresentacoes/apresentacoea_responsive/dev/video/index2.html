@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Vídeo</title>
+</head>
+<style>
+  .wrapper-with-intrinsic-ratio {
+    position: relative;
+    padding-bottom: 20%;
+    height: 0;
+  }
+  .element-to-stretch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: teal;
+  }
+  object,
+  embed, iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<body>
+  <div class="wrapper-with-intrinsic-ratio">
+    <div class="element-to-stretch">
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/R090-b5Vox8" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</body>
+
+</html>

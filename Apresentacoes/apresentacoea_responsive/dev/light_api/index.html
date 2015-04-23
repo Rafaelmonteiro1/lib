@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    window.addEventListener('devicelight', function (event) {
+      var html = document.getElementsByTagName('html')[0];
+
+      if (event.value < 50) {
+        html.classList.add('darklight');
+        html.classList.remove('brightlight');
+      } else {
+        html.classList.add('brightlight');
+        html.classList.remove('darklight');
+      }
+      
+      myLux = event.value;
+      hexString = myLux.toString(16);
+      x = document.getElementById("lux");
+      x.innerHTML = myLux;
+    });
+
+
+    window.addEventListener('devicelight', function (event) {
+      
+    });
+  </script>
+  <style>
+    .darklight * {
+      background: #efefef;
+      color: #aaa;
+    }
+    .brightlight * {
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Nível de Lux no ambiente: <span id="lux"></span></h1>
+  
+
+</body>
+
+</html>
